@@ -6,14 +6,11 @@
 ![image](https://user-images.githubusercontent.com/88870445/172385635-47561cd3-0b36-49a7-8c48-9e8752fde43e.png)
 
 
-## 출발점이 'A'일 때 출력값
+## 원하는 출발지와 목적지를 입력
+![image](https://user-images.githubusercontent.com/88870445/172531912-ffc1ce51-1f80-4a6a-afce-91e75c1c5c2f.png)
 
-![image](https://user-images.githubusercontent.com/88870445/172385773-5c9df5e5-e5a8-4cf5-933c-e8c771b021d0.png)
 
-시작점부터 목적지까지의 거리와
+## 출발지에서 목적지까지의 거리와 경로 출력
 
-![image](https://user-images.githubusercontent.com/88870445/172385871-ce0ea8a4-a043-4266-80e8-e7c5069a3b57.png)
-
-거쳐야 할 경로 출력
-
+![image](https://user-images.githubusercontent.com/88870445/172531960-069cc165-729d-4b28-8508-45489174f678.png)
 
