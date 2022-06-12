@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class dijk{
 	public static void main(String[] args) {
@@ -32,18 +33,17 @@ public class dijk{
 		d.input("p","r",6);
 		d.input("r","s",5);
 		
-		System.out.print("출발지 입력:");
-		String start = sc.next();
-		System.out.print("목적지 입력:");
-		String end = sc.next();
 		
-		d.algorithm(start, end);
-		
+		System.out.print("살 품목:"); 
+		String list = sc.nextLine(); 
+		String []shoplist=list.split("");
+		d.rearray(shoplist);
+	 
 	}
-
 }
 
 class Dijkstra {
+	Scanner sc = new Scanner(System.in);
 	private int n; 
 	private int[][] weight; 
 	private String[] saveRoute;
@@ -65,7 +65,36 @@ class Dijkstra {
 		}
 		return x;
 	}
-	
+	public void rearray(String[] r) {
+		int []array = new int[r.length];
+		for(int i=0;i<r.length;i++) {
+			for(int j=0;j<vertex.length;j++) {
+				if(r[i].equals(vertex[j])) {
+					array[i]=j;
+					
+				}
+			}
+		}
+		Arrays.sort(array);
+		System.out.print("출발 지점:"); 
+		String start = sc.next();
+		if(start.equals("i")) { 
+			  algorithm("i", vertex[array[0]]);
+			  
+			  for(int i=0;i<array.length-1;i++) { 
+				  algorithm(vertex[array[i]], vertex[array[i+1]]); 
+				 } 
+			  }
+		else if(start.equals("t")) { 
+			  algorithm("t", vertex[array[0]]);
+			  for(int i=0;i<array.length-1;i++) { 
+				  algorithm(vertex[array[i]], vertex[array[i+1]]); 
+				  }
+		  
+		  }
+			
+		
+	}
 	
 	public void input(String v1, String v2, int w) {
 		int x1 = stringToInt(v1);
@@ -93,6 +122,7 @@ class Dijkstra {
 		distance[x] = 0;
 		visited[x] = true; 
 		saveRoute[x] = vertex[x]; 
+		
 		int y = stringToInt(k);
 		
 		for(int i=0; i<n; i++) {
@@ -122,13 +152,41 @@ class Dijkstra {
 					}
 				}
 			}
-		}
-			
+		}				
+		
+		
 		for(int i=0;i<n;i++) {
 			if(k.equals(vertex[i])==true) {
-				System.out.println("시작 꼭지점 "+a+"부터 꼭지점 "+k+"까지의 거리 :"+ distance[i]);
+					System.out.println("시작 꼭지점 "+a+"부터 꼭지점 "+k+"까지의 거리 :"+ distance[i]);
+					
 			}
 		}
+		
+		
+		/*
+		 * for(int j=0;j<3;j++) { list[j]=distance[i];
+		 * System.out.println(j+" "+list[i]); }
+		 */
+		/*for(int j=0;j<1;j++) {
+			for(int i=0;i<n;i++) {
+				if(k.equals(vertex[i])==true) {
+					list[j]=distance[i];
+					//System.out.print(list[j]+" ");
+					Arrays.sort(list);
+					for(int num: list) {
+						System.out.print(Arrays.toString(visited));
+					}
+					//compare(list[j]);
+					//compare(a,k,distance[i]);
+					
+					//System.out.println("시작 꼭지점 "+a+"부터 꼭지점 "+k+"까지의 거리 :"+ distance[i]);
+				}
+				
+			}
+		
+		}*/
+		
+		
 		
 					
 		for(int i=0; i<n; i++) {
@@ -143,7 +201,8 @@ class Dijkstra {
 				index = stringToInt(saveRoute[index]);
 			}
 			StringBuilder sb = new StringBuilder(route);
-			System.out.println(sb.reverse() + vertex[i]);
+			System.out.print(sb.reverse() + vertex[i]);
+			System.out.println("\n");
 			}
 		}
 	}
