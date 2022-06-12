@@ -6,11 +6,9 @@
 ![image](https://user-images.githubusercontent.com/88870445/172385635-47561cd3-0b36-49a7-8c48-9e8752fde43e.png)
 
 
-## 원하는 출발지와 목적지를 입력
-![image](https://user-images.githubusercontent.com/88870445/172531912-ffc1ce51-1f80-4a6a-afce-91e75c1c5c2f.png)
+## 살 품목을 입력하면 최단 거리와 경로 출력
+![image](https://user-images.githubusercontent.com/88870445/173233126-b2735d02-a8fd-4de9-af54-9ed7f0b0025f.png)
 
+![image](https://user-images.githubusercontent.com/88870445/173233386-b8ae6faa-fbef-4261-8ff5-567c1a7f6948.png)
 
-## 출발지에서 목적지까지의 거리와 경로 출력
-
-![image](https://user-images.githubusercontent.com/88870445/172531960-069cc165-729d-4b28-8508-45489174f678.png)
-
+![image](https://user-images.githubusercontent.com/88870445/173233411-725ee0db-ccdd-489c-8d46-7a86d42e53f5.png)
